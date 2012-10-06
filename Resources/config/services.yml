@@ -1,7 +1,10 @@
 parameters:
-#    koala_mercury_content.example.class: Koala\Bundle\MercuryContentBundle\Example
+    koala_mercury_content.controller.class: Koala\Bundle\MercuryContentBundle\Controller\ContentController
+    koala_mercury_content.default_template: KoalaMercuryContentBundle:Content:index.html.twig
 
 services:
-#    koala_mercury_content.example:
-#        class: %koala_mercury_content.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    koala_mercury_content.controller:
+        class: %koala_mercury_content.controller.class%
+        arguments:
+            - @templating
+            - %koala_mercury_content.default_template%
