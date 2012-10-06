@@ -1,0 +1,9 @@
+static:
+    -
+        name: "home"
+        title: "Welcome"
+        regions:
+            content: |
+                <h1>Hello World!!</h1>
+                <p>This is KoalaContentBundle - the simple CMS based on <a href="http://jejacks0n.github.com/mercury/">Mercury Editor</a>. Just click this content to be able to edit it.</p>
+                <p>See <a href="https://github.com/flojon/KoalaContentBundle">KoalaContentBundle</a> for more information.</p>

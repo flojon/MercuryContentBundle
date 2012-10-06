@@ -1,0 +1,3 @@
+koala_mercury_content_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: KoalaMercuryContentBundle:Default:index }

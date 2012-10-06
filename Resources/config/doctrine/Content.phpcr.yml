@@ -1,0 +1,15 @@
+Koala\Bundle\MercuryContentBundle\Document\Content:
+    referenceable: true
+    type: document
+    id: path
+    parentdocument: parent
+    nodename: name
+    node: node
+    fields:
+        regions:
+            type: string
+            assoc: ""
+        title: string
+    referrers:
+        routes:
+            filter: routeContent
