@@ -20,9 +20,19 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('koala_mercury_content');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $saveMethods = array('put', 'post');
+
+        $rootNode
+            ->children()
+                ->scalarNode('save_method')
+                    ->defaultValue('put')
+                    ->validate()
+                        ->ifNotInArray($saveMethods)
+                        ->thenInvalid('Invalid saveMethod: %s. Please choose one of '.json_encode($saveMethods))
+                    ->end()
+                ->end()
+            ->end()
+        ;
 
         return $treeBuilder;
     }
