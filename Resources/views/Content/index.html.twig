@@ -11,7 +11,9 @@
             {% block menu %}<nav id="menu">{{knp_menu_render('main_menu')}}</nav>{% endblock %}
             {% block content %}
             <div id="main">
-                {{page.regions.content|raw}}
+                <div id="content" data-mercury="full">
+                    {{page.regions.content|raw}}
+                </div>
             </div>
             {% endblock %}
         </div>

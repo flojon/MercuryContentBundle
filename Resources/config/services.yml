@@ -6,5 +6,7 @@ services:
     koala_mercury_content.controller:
         class: %koala_mercury_content.controller.class%
         arguments:
+            - @doctrine_phpcr.odm.default_document_manager
             - @templating
             - %koala_mercury_content.default_template%
+            - %koala_mercury_content.save_method%

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+    <title>{{page.title}}</title>
+    <meta name="page-id" content="{{page.path}}"/>
+    <link rel="stylesheet" href="{{asset('mercury/stylesheets/mercury.bundle.css')}}" type="text/css" charset="utf-8"/>
+    <script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')}}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{asset('mercury/javascripts/mercury.min.js')}}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{asset('mercury/javascripts/mercury_dialogs.js')}}" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        // Set to the url that you want to save any given page to, leave null for default handling.
+        var saveUrl = null;
+
+        // Instantiate the PageEditor
+        new Mercury.PageEditor(saveUrl, {
+            saveStyle:  'json', // 'form', or 'json' (default json)
+            saveMethod: '{{save_method|upper}}', // 'PUT', or 'POST', (create, vs. update -- default PUT)
+            visible:    true,  // boolean - if the interface should start visible or not
+        });
+    </script>
+</body>
+</html>
