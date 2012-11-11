@@ -28,12 +28,8 @@ class ContentController extends BaseContentController
             return new Response("", 200, array('Content-Type'=>'application/json'));
         }
 
-        if (!$request->query->get('mercury_frame')) {   // TODO check permission
-            return $this->templating->renderResponse("KoalaMercuryContentBundle:Content:mercury.html.twig", array(
-                'page' => $contentDocument,
-                'save_method' => $this->save_method,
-            ));
-        }
+        // TODO check permission
+        $contentTemplate = $request->query->get('mercury_frame') ? $contentTemplate : "KoalaMercuryContentBundle:Content:mercury.html.twig";
 
         return parent::indexAction($request, $contentDocument, $contentTemplate);
     }
@@ -43,6 +39,7 @@ class ContentController extends BaseContentController
         return array(
             'page' => $contentDocument,
             'title' => $contentDocument->getTitle(),
+            'save_method' => $this->save_method,
         );
     }
 
