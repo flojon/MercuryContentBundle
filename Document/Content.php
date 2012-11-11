@@ -12,12 +12,12 @@ class Content implements RouteAwareInterface
     protected $parent;
     protected $regions = array();
     protected $title;
+    protected $options;
     protected $routes;
 
     public function getPath()
     {
         return $this->path;
-
     }
 
     public function setPath($path)
@@ -86,6 +86,16 @@ class Content implements RouteAwareInterface
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    public function setOptions($options)
+    {
+        $this->options = $options;
     }
 
     public function getRoutes()

@@ -9,6 +9,9 @@ Koala\Bundle\MercuryContentBundle\Document\Content:
         regions:
             type: string
             assoc: ""
+        options:
+            type: string
+            assoc: ""
         title: string
     referrers:
         routes:
