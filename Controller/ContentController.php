@@ -13,8 +13,12 @@ class ContentController extends BaseContentController
     protected $om;
     protected $save_method;
 
-    public function __construct(ObjectManager $om, EngineInterface $templating, $defaultTemplate, $save_method)
-    {
+    public function __construct(
+        ObjectManager $om,
+        EngineInterface $templating,
+        $defaultTemplate,
+        $save_method
+    ) {
         parent::__construct($templating, $defaultTemplate);
         $this->om = $om;
         $this->save_method = $save_method;
