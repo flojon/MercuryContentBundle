@@ -37,4 +37,13 @@ class ContentController extends BaseContentController
 
         return parent::indexAction($request, $contentDocument, $contentTemplate);
     }
+
+    protected function getParams(Request $request, $contentDocument)
+    {
+        return array(
+            'page' => $contentDocument,
+            'title' => $contentDocument->getTitle(),
+        );
+    }
+
 }
