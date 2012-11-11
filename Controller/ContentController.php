@@ -39,6 +39,7 @@ class ContentController extends BaseContentController
         return array(
             'page' => $contentDocument,
             'title' => $contentDocument->getTitle(),
+            'regions' => $contentDocument->getRegions(),
             'save_method' => $this->save_method,
         );
     }

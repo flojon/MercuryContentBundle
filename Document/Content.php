@@ -65,6 +65,11 @@ class Content implements RouteAwareInterface
         $this->regions[$name] = $content;
     }
 
+    public function getRegions()
+    {
+        return $this->regions;
+    }
+
     public function setRegions($regions) // Mercury data
     {
         foreach ($regions as $name=>$content) {
