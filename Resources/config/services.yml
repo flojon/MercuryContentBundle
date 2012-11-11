@@ -2,6 +2,10 @@ parameters:
     koala_mercury_content.controller.class: Koala\Bundle\MercuryContentBundle\Controller\ContentController
     koala_mercury_content.default_template: KoalaMercuryContentBundle:Content:index.html.twig
 
+    koala_mercury_content.mercury_twig_extension.class: Koala\Bundle\MercuryContentBundle\Twig\MercuryExtension
+    koala_mercury_content.mercury_twig_extension.template: 'KoalaMercuryContentBundle:Mercury:regions.html.twig'
+    koala_mercury_content.mercury_twig_extension.defaults: {tag: 'div', default: ''}
+
 services:
     koala_mercury_content.controller:
         class: %koala_mercury_content.controller.class%
@@ -10,3 +14,11 @@ services:
             - @templating
             - %koala_mercury_content.default_template%
             - %koala_mercury_content.save_method%
+
+    koala_mercury_content.mercury_twig_extension:
+        class: %koala_mercury_content.mercury_twig_extension.class%
+        arguments:
+            - %koala_mercury_content.mercury_twig_extension.template%
+            - %koala_mercury_content.mercury_twig_extension.defaults%
+        tags:
+            - { name: twig.extension }
