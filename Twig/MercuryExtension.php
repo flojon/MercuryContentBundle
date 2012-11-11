@@ -46,11 +46,9 @@ class MercuryExtension extends \Twig_Extension
             $template = $env->loadTemplate($template);
         }
 
-        $content = $context['page']->getRegion($name);
-
         $options['id'] = $name;
         $options['type'] = $type;
-        $options['content'] = empty($content) ? $options['default'] : $content;
+        $options['content'] = empty($context['regions'][$name]) ? $options['default'] : $context['regions'][$name];
 
         return $template->renderBlock($type, $options);
     }
