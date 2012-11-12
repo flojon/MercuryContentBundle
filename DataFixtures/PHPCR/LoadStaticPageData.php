@@ -37,17 +37,17 @@ class LoadStaticPageData extends ContainerAware implements FixtureInterface, Ord
                 $page->setPath($path);
                 $manager->persist($page);
             }
-//            $page->setLayout( empty($overview['layout']) ? 'default' : $overview['layout'] );
 
             if (is_array($overview['title'])) {
                 foreach ($overview['title'] as $locale => $title) {
                     $page->setTitle($title);
-//                    $page->body = $overview['content'][$locale];
                     $manager->bindTranslation($page, $locale);
                 }
             } else {
                 $page->setTitle($overview['title']);
-//                $page->body = $overview['content'];
+            }
+            if (isset($overview['options'])) {
+                $page->setOptions($overview['options']);
             }
             if (isset($overview['regions'])) {
                 foreach ($overview['regions'] as $name => $content) {
