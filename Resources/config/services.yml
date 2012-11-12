@@ -13,6 +13,8 @@ services:
             - @doctrine_phpcr.odm.default_document_manager
             - @templating
             - %koala_mercury_content.default_template%
+            - @security.context
+            - %koala_mercury_content.role%
             - %koala_mercury_content.save_method%
 
     koala_mercury_content.mercury_twig_extension:
