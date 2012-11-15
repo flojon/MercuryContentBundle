@@ -24,6 +24,7 @@ class KoalaMercuryContentExtension extends Extension
 
         $container->setParameter($this->getAlias().'.role', $config['role']);
         $container->setParameter($this->getAlias().'.save_method', $config['save_method']);
+        $container->setParameter($this->getAlias().'.upload', $config['upload']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');

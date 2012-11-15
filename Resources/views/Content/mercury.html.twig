@@ -14,6 +14,8 @@
         // Set to the url that you want to save any given page to, leave null for default handling.
         var saveUrl = null;
 
+        Mercury.config.uploading.url = "{{url('koala_mercury_content_upload')}}";
+
         // Instantiate the PageEditor
         new Mercury.PageEditor(saveUrl, {
             saveStyle:  'json', // 'form', or 'json' (default json)

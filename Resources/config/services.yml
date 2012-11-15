@@ -16,6 +16,7 @@ services:
             - @security.context
             - %koala_mercury_content.role%
             - %koala_mercury_content.save_method%
+            - %koala_mercury_content.upload%
 
     koala_mercury_content.mercury_twig_extension:
         class: %koala_mercury_content.mercury_twig_extension.class%

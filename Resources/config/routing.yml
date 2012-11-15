@@ -1,3 +1,5 @@
-koala_mercury_content_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: KoalaMercuryContentBundle:Default:index }
+koala_mercury_content_upload:
+    pattern: /mercury/upload
+    defaults: { _controller: koala_mercury_content.controller:uploadAction }
+    requirements:
+        _method: POST

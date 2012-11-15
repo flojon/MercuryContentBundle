@@ -23,6 +23,7 @@ class Configuration implements ConfigurationInterface
         $saveMethods = array('put', 'post');
 
         $rootNode
+            ->addDefaultsIfNotSet()
             ->children()
                 ->scalarNode('role')->defaultValue('IS_AUTHENTICATED_ANONYMOUSLY')->end()
                 ->scalarNode('save_method')
@@ -30,6 +31,14 @@ class Configuration implements ConfigurationInterface
                     ->validate()
                         ->ifNotInArray($saveMethods)
                         ->thenInvalid('Invalid saveMethod: %s. Please choose one of '.json_encode($saveMethods))
+                    ->end()
+                ->end()
+                ->arrayNode('upload')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->scalarNode('path')->defaultValue('%kernel.root_dir%/../web/upload')->end()
+                        ->scalarNode('url')->defaultValue('upload')->end()
+                        ->booleanNode('absolute')->defaultFalse()->end()
                     ->end()
                 ->end()
             ->end()
