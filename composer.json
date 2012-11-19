@@ -1,7 +1,7 @@
 {
     "name": "koala/mercury-content-bundle",
     "description": "Bringing the HTML5 editor Mercury to Symfony CMF",
-    "keywords":     ["symfony", "mercury", "cms", "symfony-cmf", "symfony cmf", "phpcr"],
+    "keywords":     ["symfony", "mercury", "cms"],
     "type":         "symfony-bundle",
     "license":      "MIT",
     "minimum-stability": "dev",
