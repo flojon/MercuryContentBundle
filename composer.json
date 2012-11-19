@@ -1,0 +1,33 @@
+{
+    "name": "koala/mercury-content-bundle",
+    "description": "Bringing the HTML5 editor Mercury to Symfony CMF",
+    "keywords":     ["symfony", "mercury", "cms", "symfony-cmf", "symfony cmf", "phpcr"],
+    "type":         "symfony-bundle",
+    "license":      "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Jonas Flodén",
+            "email": "jonas@koalasoft.se"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "2.1.*",
+        "jackalope/jackalope-doctrine-dbal": "dev-master",
+        "knplabs/knp-menu": "1.1.*",
+        "knplabs/knp-menu-bundle": "1.1.*",
+        "symfony-cmf/menu-bundle": "1.0.*",
+        "symfony-cmf/routing-extra-bundle": "1.0.*",
+        "symfony-cmf/content-bundle": "1.0.*",
+        "symfony-cmf/routing-extra-bundle": "1.0.*",
+        "doctrine/phpcr-bundle": "1.0.*",
+        "doctrine/phpcr-odm": "1.0.*",
+        "friendsofsymfony/rest": "dev-master",
+        "friendsofsymfony/rest-bundle": "0.9.*",
+        "jms/serializer-bundle": "0.9.*"
+    },
+    "autoload": {
+        "psr-0": { "Koala\\Bundle\\MercuryContentBundle": "" }
+    },
+    "target-dir": "Koala/Bundle/MercuryContentBundle"
+}
