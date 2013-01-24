@@ -4,7 +4,6 @@
     "keywords":     ["symfony", "mercury", "cms"],
     "type":         "symfony-bundle",
     "license":      "MIT",
-    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Jonas Flodén",
@@ -13,18 +12,21 @@
     ],
     "require": {
         "symfony/framework-bundle": "2.1.*",
-        "jackalope/jackalope-doctrine-dbal": "dev-master",
+        "jackalope/jackalope": "1.0.*@dev",
+        "jackalope/jackalope-doctrine-dbal": "1.0.*@dev",
         "knplabs/knp-menu": "1.1.*",
         "knplabs/knp-menu-bundle": "1.1.*",
-        "symfony-cmf/menu-bundle": "1.0.*",
-        "symfony-cmf/routing-extra-bundle": "1.0.*",
-        "symfony-cmf/content-bundle": "1.0.*",
-        "symfony-cmf/routing-extra-bundle": "1.0.*",
-        "doctrine/phpcr-bundle": "1.0.*",
-        "doctrine/phpcr-odm": "1.0.*",
-        "friendsofsymfony/rest": "dev-master",
+        "symfony-cmf/routing": "1.0.*@dev",
+        "symfony-cmf/menu-bundle": "1.0.*@dev",
+        "symfony-cmf/content-bundle": "1.0.*@dev",
+        "symfony-cmf/routing-extra-bundle": "1.0.*@dev",
+        "doctrine/phpcr-bundle": "1.0.*@dev",
+        "doctrine/phpcr-odm": "1.0.*@dev",
+        "phpcr/phpcr": "2.1.*@dev",
+        "phpcr/phpcr-utils": "1.0.*@dev",
+        "friendsofsymfony/rest": "0.8.*@dev",
         "friendsofsymfony/rest-bundle": "0.9.*",
-        "jms/serializer-bundle": "0.9.*"
+        "jms/serializer-bundle": "0.9.*"        
     },
     "autoload": {
         "psr-0": { "Koala\\Bundle\\MercuryContentBundle": "" }
