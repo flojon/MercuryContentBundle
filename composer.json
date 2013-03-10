@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "symfony/framework-bundle": "2.1.*",
+        "symfony/framework-bundle": ">=2.1,<2.3-dev",
         "jackalope/jackalope": "1.0.*@dev",
         "jackalope/jackalope-doctrine-dbal": "1.0.*@dev",
         "knplabs/knp-menu": "1.1.*",
