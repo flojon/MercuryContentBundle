@@ -15,4 +15,5 @@ Koala\Bundle\MercuryContentBundle\Document\Content:
         title: string
     referrers:
         routes:
-            filter: routeContent
+            referencedBy: routeContent
+            referringDocument: Symfony\Cmf\Bundle\RoutingExtraBundle\Document\Route

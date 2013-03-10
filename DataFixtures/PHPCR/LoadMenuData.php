@@ -10,8 +10,8 @@ use PHPCR\Util\NodeHelper;
 
 use Symfony\Component\DependencyInjection\ContainerAware;
 
-use Symfony\Cmf\Bundle\MenuBundle\Document\MenuItem;
-use Symfony\Cmf\Bundle\MultilangContentBundle\Document\MultilangMenuItem;
+use Symfony\Cmf\Bundle\MenuBundle\Document\MenuNode;
+use Symfony\Cmf\Bundle\MenuBundle\Document\MultilangMenuItem;
 
 class LoadMenuData extends ContainerAware implements FixtureInterface, OrderedFixtureInterface
 {
@@ -42,7 +42,7 @@ class LoadMenuData extends ContainerAware implements FixtureInterface, OrderedFi
      */
     protected function createMenuItem($dm, $parent, $name, $label, $content, $uri = null, $route = null)
     {
-        $menuitem = is_array($label) ? new MultilangMenuItem() : new MenuItem();
+        $menuitem = is_array($label) ? new MultilangMenuItem() : new MenuNode();
         $menuitem->setParent($parent);
         $menuitem->setName($name);
 
